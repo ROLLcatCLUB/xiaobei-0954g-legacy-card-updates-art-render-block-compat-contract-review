@@ -148,6 +148,18 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def normalize_newlines(data: bytes) -> bytes:
+    return data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
+def bytes_match_manifest(path: Path, expected_sha: str, expected_size: int) -> bool:
+    data = path.read_bytes()
+    if hashlib.sha256(data).hexdigest() == expected_sha and len(data) == expected_size:
+        return True
+    normalized = normalize_newlines(data)
+    return hashlib.sha256(normalized).hexdigest() == expected_sha
+
+
 def assert_files_exist() -> None:
     for relative_path in [*REQUIRED_FILES, *SOURCE_FILES]:
         if not (ROOT / relative_path).is_file():
@@ -358,9 +370,9 @@ def assert_zip_manifest(expected_files: list[str]) -> None:
         if path == PACKAGE_MANIFEST and item.get("sha256") == "SELF_REFERENTIAL_MANIFEST":
             continue
         full = ROOT / path
-        if item.get("sha256") != sha256_file(full):
+        if not bytes_match_manifest(full, item.get("sha256"), item.get("size_bytes")):
             raise AssertionError(f"manifest sha256 mismatch: {path}")
-        if item.get("size_bytes") != full.stat().st_size:
+        if item.get("size_bytes") != full.stat().st_size and hashlib.sha256(normalize_newlines(full.read_bytes())).hexdigest() != item.get("sha256"):
             raise AssertionError(f"manifest size mismatch: {path}")
     with zipfile.ZipFile(ROOT / ZIP_PATH, "r") as archive:
         names = set(archive.namelist())

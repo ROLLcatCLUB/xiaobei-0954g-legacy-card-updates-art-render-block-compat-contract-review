@@ -5,7 +5,7 @@
   "recommended_next_stage": "0954H_LEGACY_CARD_UPDATES_ART_RENDER_BLOCK_INACTIVE_APPLY",
   "zip_path": "docs/audit_packages/legacy_card_updates_to_art_render_block_compatibility_contract_0954G.zip",
   "zip_self_entry_count": 14,
-  "self_reference_policy": "manifest entry uses SELF_REFERENTIAL_MANIFEST; validator checks all other entries, path safety, forbidden file patterns, and zip path parity",
+  "self_reference_policy": "manifest entry uses SELF_REFERENTIAL_MANIFEST; validator checks zip/manifest strictly, path safety, forbidden file patterns, and text worktree newline equivalence",
   "files": [
     {
       "path": "compatibility/card_updates/legacy_card_updates_to_art_render_block_contract_0954G.md",
@@ -49,8 +49,8 @@
     },
     {
       "path": "scripts/validate_legacy_card_updates_to_art_render_block_compatibility_contract_0954G.py",
-      "sha256": "26e3a301a97e2f640616e4f32f2953a843920e111bb7be4c46f4c272376e96e4",
-      "size_bytes": 18499
+      "sha256": "d109359ae14b9149d513083f09bdb31610cdad3422cb914f768a3bce976b29b5",
+      "size_bytes": 19068
     },
     {
       "path": "docs/audit_packages/legacy_card_updates_to_art_render_block_compatibility_contract_0954G_manifest.json",
