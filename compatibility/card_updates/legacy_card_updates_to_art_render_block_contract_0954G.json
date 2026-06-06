@@ -1,0 +1,52 @@
+{
+  "stage_id": "0954G_LEGACY_CARD_UPDATES_TO_ART_RENDER_BLOCK_COMPATIBILITY_CONTRACT",
+  "stage_type": "legacy_card_updates_to_art_render_block_compatibility_contract_only",
+  "previous_stage": "0954F_ART_SUBJECT_PACK_INACTIVE_SMOKE",
+  "previous_status": "ART_SUBJECT_PACK_INACTIVE_SMOKE_PASS",
+  "contract_type": "legacy_card_updates_to_art_render_block_compatibility",
+  "runtime_adapter_implemented": false,
+  "component_grid_behavior_changed": false,
+  "compatibility_runtime_imported": false,
+  "inputs": [
+    "card_updates[]",
+    "frontend/workbench/fixtures/agent_output_existing_workbench_fixture_0952F_R1.js",
+    "frontend/workbench/fixtures/provider_candidate_patch_0952G_R1.js",
+    "subject_packs/art/topic_contexts/qinglv_china_color_topic_context_0954E.json",
+    "platform_core/render_blocks/render_block_type_schema_0954C.json"
+  ],
+  "outputs": [
+    "legacy_card_block[]",
+    "candidate_patch_block",
+    "status_summary_block",
+    "review_gate_block",
+    "inactive_art_render_plan"
+  ],
+  "flow": [
+    "card_updates -> legacy_card_block",
+    "0952F 12 cards -> art legacy_card_block sequence",
+    "0952G provider candidate patch -> candidate_patch_block",
+    "art subject pack context -> inactive_art_render_plan"
+  ],
+  "legacy_strategy": {
+    "legacy_card_block_compatibility_only": true,
+    "new_platform_core_prefers_finer_grained_blocks": true,
+    "legacy_0952f_files_moved": false,
+    "legacy_0952g_files_moved": false,
+    "fixture_reading_allowed_for_sample_output": true,
+    "runtime_import_allowed": false,
+    "next_apply_condition": "inactive_adapter_first_then_inactive_smoke"
+  },
+  "safety_rules": {
+    "raw_html_allowed": false,
+    "script_allowed": false,
+    "inline_event_handler_allowed": false,
+    "provider_call_allowed": false,
+    "backend_call_allowed": false,
+    "memory_write_allowed": false,
+    "feishu_writeback_allowed": false,
+    "formal_export_allowed": false,
+    "seal_allowed": false
+  },
+  "final_status": "LEGACY_CARD_UPDATES_ART_RENDER_BLOCK_COMPAT_CONTRACT_PASS",
+  "recommended_next_stage": "0954H_LEGACY_CARD_UPDATES_ART_RENDER_BLOCK_INACTIVE_APPLY"
+}

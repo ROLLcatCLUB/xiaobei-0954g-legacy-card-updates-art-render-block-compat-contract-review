@@ -1,0 +1,81 @@
+{
+  "stage_id": "0954G_LEGACY_CARD_UPDATES_TO_ART_RENDER_BLOCK_COMPATIBILITY_CONTRACT",
+  "package_type": "github_review_audit_package",
+  "final_status": "LEGACY_CARD_UPDATES_ART_RENDER_BLOCK_COMPAT_CONTRACT_PASS",
+  "recommended_next_stage": "0954H_LEGACY_CARD_UPDATES_ART_RENDER_BLOCK_INACTIVE_APPLY",
+  "zip_path": "docs/audit_packages/legacy_card_updates_to_art_render_block_compatibility_contract_0954G.zip",
+  "zip_self_entry_count": 14,
+  "self_reference_policy": "manifest entry uses SELF_REFERENTIAL_MANIFEST; validator checks all other entries, path safety, forbidden file patterns, and zip path parity",
+  "files": [
+    {
+      "path": "compatibility/card_updates/legacy_card_updates_to_art_render_block_contract_0954G.md",
+      "sha256": "ffb7839ea4ab71242e13c3589afbc5ecc1e72efe537081efca774120ef99b7f2",
+      "size_bytes": 3542
+    },
+    {
+      "path": "compatibility/card_updates/legacy_card_updates_to_art_render_block_contract_0954G.json",
+      "sha256": "406f3a8d108b9460649408abd645301b43b9c1ccddecffb6c674c0d569fa1fc2",
+      "size_bytes": 2135
+    },
+    {
+      "path": "compatibility/card_updates/legacy_card_updates_field_mapping_0954G.json",
+      "sha256": "37a8c3d1dd36029701cbe4e3f5915c2e7f2e896e0a3f3e53eb69db429a5a0ed7",
+      "size_bytes": 2431
+    },
+    {
+      "path": "compatibility/card_updates/legacy_card_updates_sample_output_0954G.json",
+      "sha256": "7fe67c07d9adc593d47b72ca2c5124f0dfb567d656cf1219241ed6415feb9944",
+      "size_bytes": 15218
+    },
+    {
+      "path": "compatibility/card_updates/provider_candidate_patch_mapping_0954G.json",
+      "sha256": "06f971433ca74055fa5e64ea00b3776f5da3d987fb4d0bb7d9171d1a18e573ab",
+      "size_bytes": 2060
+    },
+    {
+      "path": "docs/audit/legacy_card_updates_to_art_render_block_compatibility_contract_0954G_report.md",
+      "sha256": "01667c4ef9f6285adbad8ae2b6a26b8a30b0c213cd8c5af96beb50183c70273e",
+      "size_bytes": 3243
+    },
+    {
+      "path": "docs/audit/legacy_card_updates_to_art_render_block_compatibility_contract_0954G_result.json",
+      "sha256": "29686163c40c17863c0ec17dea3c49c048d79a96c3ecb120b4c625ffbac579f9",
+      "size_bytes": 1278
+    },
+    {
+      "path": "docs/audit/legacy_card_updates_to_art_render_block_compatibility_contract_0954G_checklist.json",
+      "sha256": "5ae3efec4b81dda13af52b06c6e93b8e9e17171414e1381dbd67439c043343f0",
+      "size_bytes": 1984
+    },
+    {
+      "path": "scripts/validate_legacy_card_updates_to_art_render_block_compatibility_contract_0954G.py",
+      "sha256": "26e3a301a97e2f640616e4f32f2953a843920e111bb7be4c46f4c272376e96e4",
+      "size_bytes": 18499
+    },
+    {
+      "path": "docs/audit_packages/legacy_card_updates_to_art_render_block_compatibility_contract_0954G_manifest.json",
+      "sha256": "SELF_REFERENTIAL_MANIFEST",
+      "size_bytes": -1
+    },
+    {
+      "path": "frontend/workbench/fixtures/agent_output_existing_workbench_fixture_0952F_R1.js",
+      "sha256": "bf7d61c84e52ab54688c3c4a84395608d49539c831fdc2fb66712a11d1222632",
+      "size_bytes": 6610
+    },
+    {
+      "path": "frontend/workbench/fixtures/provider_candidate_patch_0952G_R1.js",
+      "sha256": "57d07fffb0932a740a856024a77cce34b8b5fc9ff9490c2ca9b6a5193e3b3d11",
+      "size_bytes": 2533
+    },
+    {
+      "path": "subject_packs/art/topic_contexts/qinglv_china_color_topic_context_0954E.json",
+      "sha256": "d191f56c9cf7473780526c525d297d001fd394a79b5f475244ad2bdd0050b173",
+      "size_bytes": 722
+    },
+    {
+      "path": "platform_core/render_blocks/render_block_type_schema_0954C.json",
+      "sha256": "5362677528b18134e717b3c242b7d51f4233c83ce722402702ad41ceb913e7cc",
+      "size_bytes": 2524
+    }
+  ]
+}

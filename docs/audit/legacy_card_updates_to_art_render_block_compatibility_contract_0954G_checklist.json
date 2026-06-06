@@ -1,0 +1,50 @@
+{
+  "stage_id": "0954G_LEGACY_CARD_UPDATES_TO_ART_RENDER_BLOCK_COMPATIBILITY_CONTRACT",
+  "checklist": [
+    {
+      "id": "compatibility_inputs_defined",
+      "status": "PASS",
+      "evidence": "card_updates[], 0952F fixture, 0952G fixture, qinglv topic context, and 0954C render block schema are listed as inactive inputs."
+    },
+    {
+      "id": "compatibility_outputs_defined",
+      "status": "PASS",
+      "evidence": "legacy_card_block[], candidate_patch_block, status_summary_block, review_gate_block, and inactive_art_render_plan are defined."
+    },
+    {
+      "id": "field_mapping_defined",
+      "status": "PASS",
+      "evidence": "Required mappings from card fields and provider candidate patch fields are present."
+    },
+    {
+      "id": "sample_output_created",
+      "status": "PASS",
+      "evidence": "Sample output includes 12 legacy_card_block entries, one candidate_patch_block, one review_gate_block, one status_summary_block, and one inactive_art_render_plan."
+    },
+    {
+      "id": "safety_rules_declared",
+      "status": "PASS",
+      "evidence": "raw_html/script/inline handlers/provider/backend/memory/Feishu/export/seal are all disallowed."
+    },
+    {
+      "id": "legacy_strategy_declared",
+      "status": "PASS",
+      "evidence": "legacy_card_block is compatibility-only; finer-grained blocks remain preferred for new platform core."
+    },
+    {
+      "id": "legacy_files_not_moved",
+      "status": "PASS",
+      "evidence": "0952F and 0952G fixture paths are referenced in place and are not moved or deleted."
+    },
+    {
+      "id": "runtime_not_imported",
+      "status": "PASS",
+      "evidence": "No runtime adapter is implemented; existing runtime files are scanned for 0954G compatibility imports."
+    },
+    {
+      "id": "zip_manifest_aligned",
+      "status": "PASS",
+      "evidence": "Validator checks ZIP/manifest path parity, SHA256 parity, path safety, and forbidden secret/student-data filename patterns."
+    }
+  ]
+}

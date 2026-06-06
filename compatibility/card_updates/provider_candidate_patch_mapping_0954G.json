@@ -1,0 +1,61 @@
+{
+  "stage_id": "0954G_LEGACY_CARD_UPDATES_TO_ART_RENDER_BLOCK_COMPATIBILITY_CONTRACT",
+  "mapping_type": "provider_candidate_patch_to_candidate_patch_block",
+  "source_fixture": "frontend/workbench/fixtures/provider_candidate_patch_0952G_R1.js",
+  "target_block_type": "candidate_patch_block",
+  "review_gate_created_when": "teacher_confirmation_required=true",
+  "field_mappings": [
+    {
+      "input": "target_card_id",
+      "output": "candidate_patch_block.content.target_card_id"
+    },
+    {
+      "input": "target_card_title",
+      "output": "candidate_patch_block.content.target_card_title"
+    },
+    {
+      "input": "candidate_patch_id",
+      "output": "candidate_patch_block.block_id"
+    },
+    {
+      "input": "candidate_summary",
+      "output": "candidate_patch_block.content.summary"
+    },
+    {
+      "input": "original_teacher_visible_text",
+      "output": "candidate_patch_block.content.original_teacher_visible_text"
+    },
+    {
+      "input": "proposed_teacher_visible_text",
+      "output": "candidate_patch_block.content.proposed_teacher_visible_text"
+    },
+    {
+      "input": "changed_fields",
+      "output": "candidate_patch_block.content.changed_fields"
+    },
+    {
+      "input": "teacher_instruction_summary",
+      "output": "candidate_patch_block.content.teacher_instruction_summary"
+    },
+    {
+      "input": "teacher_confirmation_required",
+      "output": "review_gate_block.content.teacher_confirmation_required"
+    }
+  ],
+  "provider_fixture_note": {
+    "0952g_fixture_provider_called": true,
+    "0954g_provider_called": false,
+    "0954g_rule": "Historical provider metadata may be preserved as source metadata, but compatibility contract must not call provider."
+  },
+  "safety_rules": {
+    "raw_html_allowed": false,
+    "script_allowed": false,
+    "inline_event_handler_allowed": false,
+    "provider_call_allowed": false,
+    "backend_call_allowed": false,
+    "memory_write_allowed": false,
+    "feishu_writeback_allowed": false,
+    "formal_export_allowed": false,
+    "seal_allowed": false
+  }
+}

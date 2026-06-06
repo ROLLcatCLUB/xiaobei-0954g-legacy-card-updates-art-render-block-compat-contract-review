@@ -1,0 +1,76 @@
+{
+  "stage_id": "0954G_LEGACY_CARD_UPDATES_TO_ART_RENDER_BLOCK_COMPATIBILITY_CONTRACT",
+  "mapping_type": "card_updates_to_legacy_card_block_field_mapping",
+  "input_shape": "card_updates[] or 0952F cards[]",
+  "output_shape": "legacy_card_block[]",
+  "field_mappings": [
+    {
+      "input": "card_id",
+      "output": "block_id",
+      "rule": "Preserve stable card id as render block id."
+    },
+    {
+      "input": "card_title",
+      "output": "title",
+      "rule": "Use teacher-facing card title as block title."
+    },
+    {
+      "input": "teacher_visible_summary",
+      "output": "content.summary",
+      "rule": "Preserve teacher-visible summary as plain text content."
+    },
+    {
+      "input": "editable_fields",
+      "output": "content.editable_fields",
+      "rule": "Preserve editable field names as declarative field metadata."
+    },
+    {
+      "input": "source_from_r2",
+      "output": "source",
+      "rule": "Preserve old source attribution inside source.from."
+    },
+    {
+      "input": "status",
+      "output": "status",
+      "rule": "Preserve draft/needs_confirmation state as block status."
+    },
+    {
+      "input": "available_actions",
+      "output": "actions",
+      "rule": "Convert labels to inert action descriptors; no action is executed by compatibility contract."
+    },
+    {
+      "input": "candidate_patch.target_card_id",
+      "output": "candidate_patch_block.content.target_card_id",
+      "rule": "Bind candidate patch to the legacy card target."
+    },
+    {
+      "input": "proposed_teacher_visible_text",
+      "output": "candidate_patch_block.content.proposed_teacher_visible_text",
+      "rule": "Preserve proposed teacher-visible text as plain text candidate content."
+    },
+    {
+      "input": "teacher_confirmation_required",
+      "output": "review_gate_block",
+      "rule": "Create inactive review gate when teacher confirmation is required."
+    }
+  ],
+  "required_output_blocks": [
+    "legacy_card_block",
+    "candidate_patch_block",
+    "status_summary_block",
+    "review_gate_block",
+    "inactive_art_render_plan"
+  ],
+  "safety_rules": {
+    "raw_html_allowed": false,
+    "script_allowed": false,
+    "inline_event_handler_allowed": false,
+    "provider_call_allowed": false,
+    "backend_call_allowed": false,
+    "memory_write_allowed": false,
+    "feishu_writeback_allowed": false,
+    "formal_export_allowed": false,
+    "seal_allowed": false
+  }
+}
